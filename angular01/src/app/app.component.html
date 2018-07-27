@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<!--导航栏-->
+<app-navbar></app-navbar>
+<!--中间-->
+<div class="container">
+  <div class="row">
+    <!-- 1/4 -->
+    <div class="col-md-3">
+      <!--商品搜索-->
+      <app-search></app-search>
+    </div>
+    <!-- 3/4 -->
+    <div class="col-md-9">
+     <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>
+<!--底部-->
+<app-footer></app-footer>

@@ -1,0 +1,7 @@
+<!DOCTYPE html>
+<p>
+  <!--实心星星:glyphicon glyphicon-star 空心星星:glyphicon glyphicon-star glyphicon-star-empty-->
+  <span *ngFor="let star of stars" class="glyphicon glyphicon-star"
+  [class.glyphicon-star-empty]="star"> </span>
+  <span>{{rating}}星</span>
+</p>

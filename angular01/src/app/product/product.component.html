@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<div class="row">
+  <div class="col-sm-12">
+    <div class="form-group">
+      <input [formControl]="titleFilter" placeholder="请输入商品名称" class="form-control">
+    </div>
+  </div>
+</div>
+<!--*ngFor指令 根据数组元素,循环生成html代码-->
+<div *ngFor=" let product of products | filter:'title':keyword  " class="col-md-4 col-sm-4 col-lg-4">
+  <div class="thumbnail">
+    <img [src]="imgUrl" alt="商品图片">
+    <div class="caption">
+      <h4 class="pull-right">{{product.price}}元</h4>
+      <h4><a [routerLink]="['/product',product.id]">{{product.title}}</a></h4>
+      <p>{{product.desc}}</p>
+    </div>
+    <div>
+      <!--将当前rating属性值传到星级评价组件中 父组件传递到子组件-->
+      <app-stars [rating]="product.rating"></app-stars>
+    </div>
+  </div>
+</div>
